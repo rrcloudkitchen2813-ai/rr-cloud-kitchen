@@ -1,3 +1,8 @@
+/* ===========================
+   RR CLOUD KITCHEN
+   PART 1
+=========================== */
+
 *{
 margin:0;
 padding:0;
@@ -16,14 +21,13 @@ overflow-x:hidden;
 /* HERO */
 
 .hero{
-height:100vh;
+position:relative;
+min-height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-position:relative;
 overflow:hidden;
 }
 
@@ -41,32 +45,36 @@ opacity:.25;
 z-index:-2;
 }
 
-.hero::after{
-content:"";
+.overlay{
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.92));
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9));
 z-index:-1;
+}
+
+.hero-content{
+max-width:700px;
 }
 
 .logo{
 width:180px;
 height:180px;
+object-fit:contain;
+background:#fff;
+padding:10px;
 border-radius:50%;
 border:5px solid #ffb300;
-background:#fff;
 box-shadow:0 0 30px rgba(255,179,0,.5);
 margin-bottom:25px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:50px;
 color:#ffb300;
 margin-bottom:12px;
-font-weight:700;
 }
 
 .hero p{
@@ -75,36 +83,36 @@ margin-bottom:30px;
 color:#ddd;
 }
 
-/* BUTTON */
-
 .btn{
 display:inline-block;
 padding:15px 35px;
 background:linear-gradient(45deg,#ff3d00,#ff9800);
 color:#fff;
+text-decoration:none;
 border:none;
 border-radius:50px;
 font-size:18px;
 font-weight:bold;
 cursor:pointer;
-text-decoration:none;
 transition:.3s;
-box-shadow:0 8px 20px rgba(255,98,0,.4);
+box-shadow:0 10px 25px rgba(255,98,0,.35);
 }
 
 .btn:hover{
 transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(255,152,0,.5);
+box-shadow:0 15px 30px rgba(255,98,0,.5);
 }
-/* MENU */
+/* ===========================
+   MENU
+=========================== */
 
 .menu{
+max-width:1300px;
+margin:auto;
 padding:70px 20px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
-max-width:1300px;
-margin:auto;
 }
 
 .menu h2{
@@ -112,20 +120,21 @@ grid-column:1/-1;
 text-align:center;
 font-size:42px;
 color:#ffb300;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .card{
 background:#1c1c1c;
-border-radius:20px;
+border-radius:22px;
 overflow:hidden;
-box-shadow:0 0 20px rgba(255,179,0,.15);
+box-shadow:0 8px 25px rgba(0,0,0,.35);
 transition:.4s;
-border:1px solid rgba(255,179,0,.2);
+border:2px solid transparent;
 }
 
 .card:hover{
 transform:translateY(-10px);
+border-color:#ffb300;
 box-shadow:0 15px 35px rgba(255,179,0,.35);
 }
 
@@ -139,8 +148,8 @@ display:block;
 .card h3{
 padding:18px 15px 10px;
 text-align:center;
-font-size:28px;
 color:#ffb300;
+font-size:28px;
 }
 
 .card p{
@@ -150,16 +159,18 @@ color:#ddd;
 font-size:17px;
 }
 
-/* VIDEOS */
+/* ===========================
+   VIDEOS
+=========================== */
 
 .videos{
 padding:70px 20px;
+background:#181818;
 text-align:center;
-background:#141414;
 }
 
 .videos h2{
-font-size:40px;
+font-size:38px;
 color:#ffb300;
 margin-bottom:15px;
 }
@@ -171,19 +182,20 @@ margin-bottom:25px;
 
 video{
 width:100%;
-max-width:750px;
+max-width:800px;
 border-radius:20px;
-margin:25px auto;
+margin:20px auto;
 display:block;
-box-shadow:0 0 20px rgba(255,179,0,.25);
+box-shadow:0 0 25px rgba(255,179,0,.2);
 }
 
-/* YOUTUBE */
+/* ===========================
+   YOUTUBE
+=========================== */
 
 .youtube{
 padding:70px 20px;
 text-align:center;
-background:#1b1b1b;
 }
 
 .youtube h2{
@@ -193,15 +205,18 @@ margin-bottom:15px;
 }
 
 .youtube p{
-color:#ccc;
+color:#ddd;
 margin-bottom:25px;
 }
 
-/* CONTACT */
+/* ===========================
+   CONTACT
+=========================== */
 
 .contact{
 padding:70px 20px;
 text-align:center;
+background:#181818;
 }
 
 .contact h2{
@@ -215,7 +230,30 @@ font-size:20px;
 margin-bottom:20px;
 color:#ddd;
 }
-/* ORDER POPUP */
+
+/* ===========================
+   ORDER SECTION
+=========================== */
+
+.order-section{
+padding:70px 20px;
+text-align:center;
+}
+
+.order-section h2{
+font-size:38px;
+color:#ffb300;
+margin-bottom:15px;
+}
+
+.order-section p{
+color:#ccc;
+margin-bottom:25px;
+font-size:18px;
+}
+/* ===========================
+   ORDER POPUP
+=========================== */
 
 .popup{
 display:none;
@@ -228,36 +266,39 @@ background:rgba(0,0,0,.75);
 backdrop-filter:blur(8px);
 justify-content:center;
 align-items:center;
-z-index:9999;
+z-index:99999;
 }
 
 .popup-box{
-width:92%;
-max-width:420px;
-background:#1d1d1d;
+width:90%;
+max-width:430px;
+background:#1e1e1e;
 padding:30px;
 border-radius:25px;
 border:2px solid #ffb300;
-box-shadow:0 0 35px rgba(255,179,0,.35);
-animation:popup .35s ease;
+box-shadow:0 0 30px rgba(255,179,0,.35);
+animation:popupAnimation .3s ease;
 }
 
-@keyframes popup{
+@keyframes popupAnimation{
+
 from{
 transform:scale(.8);
 opacity:0;
 }
+
 to{
 transform:scale(1);
 opacity:1;
 }
+
 }
 
 .popup-box h2{
 text-align:center;
 color:#ffb300;
 margin-bottom:8px;
-font-size:32px;
+font-size:30px;
 }
 
 .popup-box p{
@@ -266,100 +307,127 @@ color:#ccc;
 margin-bottom:20px;
 }
 
-.popup-box input,
+.popup-box label{
+display:block;
+margin-bottom:8px;
+font-weight:bold;
+color:#ffb300;
+}
+
 .popup-box select,
+.popup-box input,
 .popup-box textarea{
+
 width:100%;
 padding:14px;
-margin:10px 0;
-background:#2b2b2b;
-border:1px solid #444;
+margin-bottom:15px;
+border:none;
 border-radius:12px;
-font-size:16px;
+background:#2a2a2a;
 color:#fff;
+font-size:16px;
 outline:none;
-}
 
-.popup-box input:focus,
-.popup-box select:focus,
-.popup-box textarea:focus{
-border-color:#ffb300;
-box-shadow:0 0 10px rgba(255,179,0,.4);
 }
 
 .popup-box textarea{
+
+height:90px;
 resize:none;
-height:100px;
+
 }
 
 .popup-buttons{
+
 display:flex;
-gap:12px;
-margin-top:15px;
+gap:10px;
+
 }
 
 .popup-buttons .btn{
+
 flex:1;
+
 }
 
 .cancel{
+
 background:#555;
+
 }
 
 .cancel:hover{
+
 background:#777;
+
 }
 
-/* FOOTER */
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
+
 background:#000;
 padding:40px 20px;
 text-align:center;
 border-top:2px solid #ffb300;
+
 }
 
 footer h2{
+
 color:#ffb300;
-margin-bottom:12px;
+margin-bottom:10px;
+
 }
 
 footer p{
-color:#bbb;
-margin:6px 0;
+
+color:#ccc;
+margin:8px 0;
+
 }
 
-/* FLOATING WHATSAPP */
+/* ===========================
+   FLOATING WHATSAPP
+=========================== */
 
 .whatsapp{
+
 position:fixed;
 right:20px;
 bottom:20px;
-width:70px;
-height:70px;
+width:65px;
+height:65px;
 background:#25D366;
 border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:34px;
-color:#fff;
+font-size:32px;
 text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,.35);
-z-index:99999;
+color:#fff;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
 transition:.3s;
+z-index:99999;
+
 }
 
 .whatsapp:hover{
+
 transform:scale(1.1);
+
 }
 
-/* MOBILE */
+/* ===========================
+   MOBILE
+=========================== */
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:34px;
+font-size:36px;
 }
 
 .hero p{
@@ -372,38 +440,41 @@ height:140px;
 }
 
 .menu{
+
 grid-template-columns:1fr;
-padding:50px 15px;
+
 }
 
 .card img{
-height:220px;
-}
 
-.menu h2,
-.videos h2,
-.youtube h2,
-.contact h2{
-font-size:30px;
+height:220px;
+
 }
 
 .btn{
+
 width:100%;
-font-size:17px;
+
 }
 
 .popup-box{
+
 padding:22px;
+
 }
 
 .popup-buttons{
+
 flex-direction:column;
+
 }
 
 .whatsapp{
-width:60px;
-height:60px;
-font-size:30px;
+
+width:58px;
+height:58px;
+font-size:28px;
+
 }
 
-  }
+}

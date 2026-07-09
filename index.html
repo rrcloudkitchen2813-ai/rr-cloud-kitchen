@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>RR Cloud Kitchen</title>
 
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="RR Cloud Kitchen - Chicken Fry, Mutton Fry, Prawn Fry, Crab Fry">
+
 <link rel="icon" href="logo.png">
 
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
 <header class="hero">
 
-<img src="logo.png" class="logo" alt="RR Cloud Kitchen">
+<img src="logo.png" class="logo">
 
 <h1>RR CLOUD KITCHEN</h1>
 
-<p>Homemade Taste, Homely Love</p>
+<p>Homemade Taste, Homely Love ❤️</p>
 
-<a href="https://wa.me/917708366480" class="btn" target="_blank">
+<a href="https://wa.me/917708366480" class="btn">
 Order on WhatsApp
 </a>
 
@@ -30,96 +36,152 @@ Order on WhatsApp
 <h2>Our Special Menu</h2>
 
 <div class="card">
-<img src="chicken.png" alt="">
+
+<img src="chicken.png">
+
 <h3>Chicken Fry</h3>
-<p>Crispy Outside... Juicy Inside!</p>
+
+<p>
+Crispy Outside...
+Juicy Inside...
+</p>
+
+<a class="btn"
+href="https://wa.me/917708366480">
+Order Now
+</a>
+
 </div>
 
 <div class="card">
-<img src="mutton.png" alt="">
+
+<img src="mutton.png">
+
 <h3>Mutton Fry</h3>
-<p>Rich Taste... Pure Satisfaction!</p>
+
+<p>
+Rich Taste...
+Pure Satisfaction...
+</p>
+
+<a class="btn"
+href="https://wa.me/917708366480">
+Order Now
+</a>
+
 </div>
 
 <div class="card">
-<img src="prawn.png" alt="">
+
+<img src="prawn.png">
+
 <h3>Prawn Fry</h3>
-<p>Fresh Premium Prawn Fry.</p>
+
+<p>
+Fresh Premium Prawn Fry
+</p>
+
+<a class="btn"
+href="https://wa.me/917708366480">
+Order Now
+</a>
+
 </div>
 
 <div class="card">
-<img src="crab.png" alt="">
+
+<img src="crab.png">
+
 <h3>Crab Fry</h3>
-<p>Hot, Spicy & Delicious.</p>
+
+<p>
+Hot, Spicy & Delicious
+</p>
+
+<a class="btn"
+href="https://wa.me/917708366480">
+Order Now
+</a>
+
 </div>
 
 </section>
-
 <section class="videos">
 
-<h2>Cooking Videos</h2>
+<h2>🎥 Cooking Videos</h2>
 
 <video controls width="100%">
-<source src="video1.mp4" type="video/mp4">
-Your browser does not support video.
+<source src="videos/video1.mp4" type="video/mp4">
 </video>
 
 <br><br>
 
 <video controls width="100%">
-<source src="video2.mp4" type="video/mp4">
-Your browser does not support video.
+<source src="videos/video2.mp4" type="video/mp4">
 </video>
 
 </section>
 
+
 <section class="reviews">
 
-<h2>Customer Reviews</h2>
+<h2>⭐ Customer Reviews</h2>
 
 <div class="review">
-★★★★★
+<h3>★★★★★</h3>
 <p>Excellent homemade taste. Highly recommended!</p>
-<b>Arun</b>
+<b>- Arun</b>
 </div>
 
 <div class="review">
-★★★★★
-<p>Best Chicken Fry in Trichy.</p>
-<b>Priya</b>
+<h3>★★★★★</h3>
+<p>Best Chicken Fry in Trichy. Crispy and delicious.</p>
+<b>- Priya</b>
 </div>
 
 <div class="review">
-★★★★★
-<p>Fresh food with fast delivery.</p>
-<b>Santhosh</b>
+<h3>★★★★★</h3>
+<p>Fresh seafood and quick delivery.</p>
+<b>- Santhosh</b>
 </div>
 
 </section>
 
+
 <section class="contact">
 
-<h2>Contact Us</h2>
+<h2>📍 Visit RR Cloud Kitchen</h2>
 
-<p><b>WhatsApp:</b> 7708366480</p>
+<p>Order fresh homemade food through WhatsApp.</p>
 
-<p>
 <a class="btn"
 href="https://maps.app.goo.gl/AzDmpVBeVfWZBosg6?g_st=aw"
 target="_blank">
 Open Google Maps
 </a>
-</p>
+
+<br><br>
+
+<a class="btn"
+href="https://wa.me/917708366480"
+target="_blank">
+Chat on WhatsApp
+</a>
 
 </section>
 
+
 <footer>
 
-<h3>RR CLOUD KITCHEN</h3>
+<h2>RR CLOUD KITCHEN</h2>
 
-<p>Homemade Taste, Homely Love</p>
+<p>🍗 Chicken Fry | 🥩 Mutton Fry | 🍤 Prawn Fry | 🦀 Crab Fry</p>
 
-<p>© 2026 RR Cloud Kitchen</p>
+<p>📱 WhatsApp : +91 7708366480</p>
+
+<p>Fresh • Hot • Delicious</p>
+
+<p>© 2026 RR Cloud Kitchen. All Rights Reserved.</p>
 
 </footer>
 
@@ -128,8 +190,31 @@ class="whatsapp"
 target="_blank">
 💬
 </a>
+<script>
 
-<script src="script.js"></script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+}
+});
+});
+
+cards.forEach(card=>{
+card.style.opacity="0";
+card.style.transform="translateY(40px)";
+card.style.transition="all .6s ease";
+observer.observe(card);
+});
+
+});
+
+</script>
 
 </body>
 </html>

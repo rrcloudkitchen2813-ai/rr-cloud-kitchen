@@ -4,7 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
 
 <title>RR Cloud Kitchen</title>
 
@@ -16,141 +18,189 @@
 
 <body>
 
+<!-- HERO -->
+
 <header class="hero">
 
-<img src="logo.png" class="logo">
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<img src="logo.png"
+class="logo"
+alt="RR Cloud Kitchen">
 
 <h1>RR CLOUD KITCHEN</h1>
 
-<p>Homemade Taste, Homely Love ❤️</p>
+<p>
+Homemade Taste ❤️ Homely Love
+</p>
 
-<a href="https://wa.me/917708366480"
-class="btn"
-target="_blank">
-Chat on WhatsApp
+<a
+href="https://wa.me/917708366480"
+target="_blank"
+class="btn">
+
+Order on WhatsApp
+
 </a>
+
+</div>
 
 </header>
 
+<!-- MENU -->
+
 <section class="menu">
 
-<h2>🍽 Our Special Menu</h2>
-
+<h2>
+🍽️ Our Special Menu
+</h2>
 <div class="card">
 
-<img src="chicken.png">
+<img src="chicken.png" alt="Chicken Fry">
 
-<h3>Chicken Fry</h3>
+<h3>🍗 Chicken Fry</h3>
 
-<p>Fresh & Crispy Chicken Fry</p>
+<p>Fresh, Crispy & Homemade Chicken Fry.</p>
 
 </div>
 
 <div class="card">
 
-<img src="mutton.png">
+<img src="mutton.png" alt="Mutton Fry">
 
-<h3>Mutton Fry</h3>
+<h3>🥩 Mutton Fry</h3>
 
-<p>Traditional Homemade Mutton Fry</p>
-
-</div>
-
-<div class="card">
-
-<img src="prawn.png">
-
-<h3>Prawn Fry</h3>
-
-<p>Fresh Sea Prawn Fry</p>
+<p>Traditional Homemade Mutton Fry with Rich Taste.</p>
 
 </div>
 
 <div class="card">
 
-<img src="crab.png">
+<img src="prawn.png" alt="Prawn Fry">
 
-<h3>Crab Fry</h3>
+<h3>🍤 Prawn Fry</h3>
 
-<p>Fresh & Spicy Crab Fry</p>
+<p>Fresh Sea Prawn Fry with Authentic Spices.</p>
+
+</div>
+
+<div class="card">
+
+<img src="crab.png" alt="Crab Fry">
+
+<h3>🦀 Crab Fry</h3>
+
+<p>Hot & Spicy Crab Fry, Freshly Cooked.</p>
 
 </div>
 
 </section>
+
+<!-- COOKING VIDEOS -->
 
 <section class="videos">
 
 <h2>🎥 Cooking Videos</h2>
 
-<p>Watch our latest cooking videos.</p>
+<p>Watch our delicious recipes in action.</p>
 
-<video controls width="100%">
+<video controls preload="metadata">
 <source src="videos/video1.mp4" type="video/mp4">
-Your browser does not support the video tag.
 </video>
 
 <br><br>
 
-<video controls width="100%">
+<video controls preload="metadata">
 <source src="videos/video2.mp4" type="video/mp4">
-Your browser does not support the video tag.
 </video>
 
 </section>
+<!-- YOUTUBE -->
 
 <section class="youtube">
 
 <h2>▶ Our YouTube Channel</h2>
 
-<p>Watch more recipes and food videos.</p>
+<p>Watch our latest cooking recipes and food videos.</p>
 
 <a href="https://youtube.com/@divyaramesh-x4o?si=6WexXHA5RJKLa4U2"
-class="btn"
-target="_blank">
-▶ Visit Our YouTube Channel
+target="_blank"
+class="btn">
+
+📺 Visit YouTube Channel
+
 </a>
 
 </section>
+
+<!-- CONTACT -->
 
 <section class="contact">
 
 <h2>📍 Contact Us</h2>
 
-<p><strong>WhatsApp:</strong> +91 7708366480</p>
+<p>
 
-<a href="https://wa.me/917708366480"
-class="btn"
-target="_blank">
+📱 WhatsApp : +91 7708366480
+
+</p>
+
+<a
+href="https://wa.me/917708366480"
+target="_blank"
+class="btn">
+
 💬 Chat on WhatsApp
+
 </a>
 
 <br><br>
 
-<a href="https://maps.app.goo.gl/AzDmpVBeVfWZBosg6?g_st=aw"
-class="btn"
-target="_blank">
+<a
+href="https://maps.app.goo.gl/AzDmpVBeVfWZBosg6?g_st=aw"
+target="_blank"
+class="btn">
+
 📍 Open Google Maps
+
 </a>
 
 </section>
 
-<section style="text-align:center;padding:40px;">
+<!-- ORDER BUTTON -->
 
-<button class="btn" onclick="openOrder()">
+<section class="order-section">
+
+<h2>🍽️ Ready to Order?</h2>
+
+<p>
+
+Tap the button below to place your order quickly.
+
+</p>
+
+<button
+class="btn"
+onclick="openOrder()">
+
 🍽️ Order Food
+
 </button>
 
 </section>
-
 <!-- ORDER POPUP -->
 
 <div id="orderPopup" class="popup">
 
-<div class="popup-content">
+<div class="popup-box">
 
 <h2>🍽️ Place Your Order</h2>
 
-<label>Select Food</label>
+<p>Please fill in your details</p>
+
+<label>Choose Item</label>
 
 <select id="foodItem">
 
@@ -164,42 +214,47 @@ target="_blank">
 
 </select>
 
-<br><br>
-
 <input
 type="text"
 id="customerName"
-placeholder="Your Name"
+placeholder="👤 Enter Your Name"
 required>
-
-<br><br>
 
 <input
 type="tel"
 id="customerPhone"
-placeholder="Mobile Number"
+placeholder="📱 Enter Mobile Number"
 required>
-
-<br><br>
 
 <textarea
 id="note"
-rows="4"
-placeholder="Special Instructions (Optional)"></textarea>
+placeholder="📝 Special Instructions (Optional)"
+rows="4"></textarea>
 
-<br><br>
+<div class="popup-buttons">
 
-<button class="btn" onclick="submitOrder()">
+<button
+class="btn"
+onclick="submitOrder()">
+
 ✅ Submit Order
+
 </button>
 
-<button class="btn" onclick="closeOrder()">
+<button
+class="btn cancel"
+onclick="closeOrder()">
+
 ❌ Cancel
+
 </button>
 
 </div>
 
 </div>
+
+</div>
+<!-- FOOTER -->
 
 <footer>
 
@@ -207,20 +262,26 @@ placeholder="Special Instructions (Optional)"></textarea>
 
 <p>🍗 Chicken Fry | 🥩 Mutton Fry | 🍤 Prawn Fry | 🦀 Crab Fry</p>
 
-<p>📱 WhatsApp : +91 7708366480</p>
+<p>📱 WhatsApp: +91 7708366480</p>
 
 <p>📍 Trichy, Tamil Nadu</p>
 
-<p>Fresh • Hot • Delicious</p>
+<p>❤️ Homemade Taste • Homely Love</p>
 
-<p>&copy; 2026 RR Cloud Kitchen</p>
+<p>&copy; 2026 RR Cloud Kitchen. All Rights Reserved.</p>
 
 </footer>
 
-<a href="https://wa.me/917708366480"
+<!-- FLOATING WHATSAPP -->
+
+<a
+href="https://wa.me/917708366480"
 class="whatsapp"
-target="_blank">
+target="_blank"
+title="Chat on WhatsApp">
+
 💬
+
 </a>
 
 <script>
@@ -250,19 +311,24 @@ alert("Please enter your mobile number");
 return;
 }
 
-const message =
-"🍽️ RR Cloud Kitchen Order\n\n" +
-"🍗 Item: " + item + "\n\n" +
-"👤 Customer: " + name + "\n\n" +
-"📞 Mobile: " + phone + "\n\n" +
-"📝 Note: " + (note || "Nil") + "\n\n" +
-"Please confirm my order.";
+const message=
+`🍽️ *RR Cloud Kitchen Order*
 
-const url =
-"https://wa.me/917708366480?text=" +
-encodeURIComponent(message);
+🍴 Item: ${item}
 
-window.open(url,"_blank");
+👤 Customer: ${name}
+
+📱 Mobile: ${phone}
+
+📝 Special Instructions:
+${note || "None"}
+
+Please confirm my order.`;
+
+window.open(
+"https://wa.me/917708366480?text="+encodeURIComponent(message),
+"_blank"
+);
 
 closeOrder();
 

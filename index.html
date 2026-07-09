@@ -9,6 +9,7 @@
 <title>RR Cloud Kitchen</title>
 
 <link rel="stylesheet" href="style.css">
+
 <link rel="icon" href="logo.png">
 
 </head>
@@ -41,12 +42,7 @@ Chat on WhatsApp
 
 <h3>Chicken Fry</h3>
 
-<p>Crispy & Delicious Chicken Fry</p>
-
-<button class="btn"
-onclick="openOrder('Chicken Fry')">
-Order Now
-</button>
+<p>Fresh & Crispy Chicken Fry</p>
 
 </div>
 
@@ -56,12 +52,7 @@ Order Now
 
 <h3>Mutton Fry</h3>
 
-<p>Fresh Homemade Mutton Fry</p>
-
-<button class="btn"
-onclick="openOrder('Mutton Fry')">
-Order Now
-</button>
+<p>Traditional Homemade Mutton Fry</p>
 
 </div>
 
@@ -73,11 +64,6 @@ Order Now
 
 <p>Fresh Sea Prawn Fry</p>
 
-<button class="btn"
-onclick="openOrder('Prawn Fry')">
-Order Now
-</button>
-
 </div>
 
 <div class="card">
@@ -87,11 +73,6 @@ Order Now
 <h3>Crab Fry</h3>
 
 <p>Fresh & Spicy Crab Fry</p>
-
-<button class="btn"
-onclick="openOrder('Crab Fry')">
-Order Now
-</button>
 
 </div>
 
@@ -121,7 +102,7 @@ Your browser does not support the video tag.
 
 <h2>▶ Our YouTube Channel</h2>
 
-<p>Watch more recipes and food videos on YouTube.</p>
+<p>Watch more recipes and food videos.</p>
 
 <a href="https://youtube.com/@divyaramesh-x4o?si=6WexXHA5RJKLa4U2"
 class="btn"
@@ -153,19 +134,45 @@ target="_blank">
 
 </section>
 
+<section style="text-align:center;padding:40px;">
+
+<button class="btn" onclick="openOrder()">
+🍽️ Order Food
+</button>
+
+</section>
+
 <!-- ORDER POPUP -->
 
 <div id="orderPopup" class="popup">
 
 <div class="popup-content">
 
-<h2>Place Your Order</h2>
+<h2>🍽️ Place Your Order</h2>
+
+<label>Select Food</label>
+
+<select id="foodItem">
+
+<option value="Chicken Fry">🍗 Chicken Fry</option>
+
+<option value="Mutton Fry">🥩 Mutton Fry</option>
+
+<option value="Prawn Fry">🍤 Prawn Fry</option>
+
+<option value="Crab Fry">🦀 Crab Fry</option>
+
+</select>
+
+<br><br>
 
 <input
 type="text"
 id="customerName"
-placeholder="Customer Name"
+placeholder="Your Name"
 required>
+
+<br><br>
 
 <input
 type="tel"
@@ -173,31 +180,22 @@ id="customerPhone"
 placeholder="Mobile Number"
 required>
 
-<input
-type="number"
-id="quantity"
-placeholder="Quantity"
-value="1"
-min="1">
+<br><br>
 
 <textarea
 id="note"
-placeholder="Special Instructions (Optional)"
-rows="3"></textarea>
+rows="4"
+placeholder="Special Instructions (Optional)"></textarea>
 
-<div style="margin-top:15px;">
+<br><br>
 
-<button class="btn"
-onclick="submitOrder()">
-Submit Order
+<button class="btn" onclick="submitOrder()">
+✅ Submit Order
 </button>
 
-<button class="btn"
-onclick="closeOrder()">
-Cancel
+<button class="btn" onclick="closeOrder()">
+❌ Cancel
 </button>
-
-</div>
 
 </div>
 
@@ -215,7 +213,7 @@ Cancel
 
 <p>Fresh • Hot • Delicious</p>
 
-<p>© 2026 RR Cloud Kitchen</p>
+<p>&copy; 2026 RR Cloud Kitchen</p>
 
 </footer>
 
@@ -227,10 +225,7 @@ target="_blank">
 
 <script>
 
-let selectedItem="";
-
-function openOrder(item){
-selectedItem=item;
+function openOrder(){
 document.getElementById("orderPopup").style.display="flex";
 }
 
@@ -240,9 +235,9 @@ document.getElementById("orderPopup").style.display="none";
 
 function submitOrder(){
 
+const item=document.getElementById("foodItem").value;
 const name=document.getElementById("customerName").value.trim();
 const phone=document.getElementById("customerPhone").value.trim();
-const qty=document.getElementById("quantity").value;
 const note=document.getElementById("note").value.trim();
 
 if(name===""){
@@ -255,22 +250,17 @@ alert("Please enter your mobile number");
 return;
 }
 
-const message=
-`🍽️ *RR Cloud Kitchen Order*
+const message =
+"🍽️ RR Cloud Kitchen Order\n\n" +
+"🍗 Item: " + item + "\n\n" +
+"👤 Customer: " + name + "\n\n" +
+"📞 Mobile: " + phone + "\n\n" +
+"📝 Note: " + (note || "Nil") + "\n\n" +
+"Please confirm my order.";
 
-🍗 Item: ${selectedItem}
-
-🔢 Quantity: ${qty}
-
-👤 Customer: ${name}
-
-📞 Mobile: ${phone}
-
-📝 Note: ${note || "Nil"}
-
-Please confirm my order.`;
-
-const url="https://wa.me/917708366480?text="+encodeURIComponent(message);
+const url =
+"https://wa.me/917708366480?text=" +
+encodeURIComponent(message);
 
 window.open(url,"_blank");
 
@@ -281,5 +271,4 @@ closeOrder();
 </script>
 
 </body>
-
 </html>

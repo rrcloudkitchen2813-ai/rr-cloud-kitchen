@@ -17,21 +17,23 @@
 
 <header class="hero">
 
-<img src="logo.png" class="logo" alt="RR Cloud Kitchen">
+<img src="logo.png" class="logo">
 
 <h1>RR CLOUD KITCHEN</h1>
 
 <p>Homemade Taste, Homely Love ❤️</p>
 
-<a href="https://wa.me/917708366480" class="btn" target="_blank">
-Order on WhatsApp
+<a href="https://wa.me/917708366480"
+class="btn"
+target="_blank">
+Chat on WhatsApp
 </a>
 
 </header>
 
 <section class="menu">
 
-<h2>🍗 Our Special Menu</h2>
+<h2>🍽 Our Special Menu</h2>
 
 <div class="card">
 
@@ -39,15 +41,12 @@ Order on WhatsApp
 
 <h3>Chicken Fry</h3>
 
-<p>
-Fresh Crispy Chicken Fry
-made with special spices.
-</p>
+<p>Crispy & Delicious Chicken Fry</p>
 
-<a class="btn"
-href="https://wa.me/917708366480">
+<button class="btn"
+onclick="openOrder('Chicken Fry')">
 Order Now
-</a>
+</button>
 
 </div>
 
@@ -57,15 +56,12 @@ Order Now
 
 <h3>Mutton Fry</h3>
 
-<p>
-Traditional Homemade
-Mutton Fry.
-</p>
+<p>Fresh Homemade Mutton Fry</p>
 
-<a class="btn"
-href="https://wa.me/917708366480">
+<button class="btn"
+onclick="openOrder('Mutton Fry')">
 Order Now
-</a>
+</button>
 
 </div>
 
@@ -75,15 +71,12 @@ Order Now
 
 <h3>Prawn Fry</h3>
 
-<p>
-Fresh Sea Prawns
-with spicy masala.
-</p>
+<p>Fresh Sea Prawn Fry</p>
 
-<a class="btn"
-href="https://wa.me/917708366480">
+<button class="btn"
+onclick="openOrder('Prawn Fry')">
 Order Now
-</a>
+</button>
 
 </div>
 
@@ -93,6 +86,17 @@ Order Now
 
 <h3>Crab Fry</h3>
 
+<p>Fresh & Spicy Crab Fry</p>
+
+<button class="btn"
+onclick="openOrder('Crab Fry')">
+Order Now
+</button>
+
+</div>
+
+</section>
+
 <section class="videos">
 
 <h2>🎥 Cooking Videos</h2>
@@ -101,24 +105,23 @@ Order Now
 
 <video controls width="100%">
 <source src="videos/video1.mp4" type="video/mp4">
-Your browser does not support video.
+Your browser does not support the video tag.
 </video>
 
 <br><br>
 
 <video controls width="100%">
 <source src="videos/video2.mp4" type="video/mp4">
-Your browser does not support video.
+Your browser does not support the video tag.
 </video>
 
 </section>
-
 
 <section class="youtube">
 
 <h2>▶ Our YouTube Channel</h2>
 
-<p>Subscribe for the latest cooking videos and food updates.</p>
+<p>Watch more recipes and food videos on YouTube.</p>
 
 <a href="https://youtube.com/@divyaramesh-x4o?si=6WexXHA5RJKLa4U2"
 class="btn"
@@ -127,7 +130,6 @@ target="_blank">
 </a>
 
 </section>
-
 
 <section class="contact">
 
@@ -151,15 +153,55 @@ target="_blank">
 
 </section>
 
+<!-- ORDER POPUP -->
 
-<a class="btn"
-href="https://wa.me/917708366480">
-Order Now
-</a>
+<div id="orderPopup" class="popup">
+
+<div class="popup-content">
+
+<h2>Place Your Order</h2>
+
+<input
+type="text"
+id="customerName"
+placeholder="Customer Name"
+required>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="Mobile Number"
+required>
+
+<input
+type="number"
+id="quantity"
+placeholder="Quantity"
+value="1"
+min="1">
+
+<textarea
+id="note"
+placeholder="Special Instructions (Optional)"
+rows="3"></textarea>
+
+<div style="margin-top:15px;">
+
+<button class="btn"
+onclick="submitOrder()">
+Submit Order
+</button>
+
+<button class="btn"
+onclick="closeOrder()">
+Cancel
+</button>
 
 </div>
 
-</section>
+</div>
+
+</div>
 
 <footer>
 
@@ -167,62 +209,77 @@ Order Now
 
 <p>🍗 Chicken Fry | 🥩 Mutton Fry | 🍤 Prawn Fry | 🦀 Crab Fry</p>
 
-<p>📱 WhatsApp: +91 7708366480</p>
+<p>📱 WhatsApp : +91 7708366480</p>
 
 <p>📍 Trichy, Tamil Nadu</p>
 
 <p>Fresh • Hot • Delicious</p>
 
-<p>&copy; 2026 RR Cloud Kitchen. All Rights Reserved.</p>
+<p>© 2026 RR Cloud Kitchen</p>
 
 </footer>
 
 <a href="https://wa.me/917708366480"
 class="whatsapp"
-target="_blank"
-title="Chat on WhatsApp">
+target="_blank">
 💬
 </a>
 
 <script>
 
-window.addEventListener("load",function(){
+let selectedItem="";
 
-document.body.style.opacity="1";
-
-});
-
-const cards=document.querySelectorAll(".card");
-
-const observer=new IntersectionObserver((entries)=>{
-
-entries.forEach((entry)=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity="1";
-
-entry.target.style.transform="translateY(0)";
-
+function openOrder(item){
+selectedItem=item;
+document.getElementById("orderPopup").style.display="flex";
 }
 
-});
+function closeOrder(){
+document.getElementById("orderPopup").style.display="none";
+}
 
-});
+function submitOrder(){
 
-cards.forEach((card)=>{
+const name=document.getElementById("customerName").value.trim();
+const phone=document.getElementById("customerPhone").value.trim();
+const qty=document.getElementById("quantity").value;
+const note=document.getElementById("note").value.trim();
 
-card.style.opacity="0";
+if(name===""){
+alert("Please enter your name");
+return;
+}
 
-card.style.transform="translateY(40px)";
+if(phone===""){
+alert("Please enter your mobile number");
+return;
+}
 
-card.style.transition="all 0.6s ease";
+const message=
+`🍽️ *RR Cloud Kitchen Order*
 
-observer.observe(card);
+🍗 Item: ${selectedItem}
 
-});
+🔢 Quantity: ${qty}
+
+👤 Customer: ${name}
+
+📞 Mobile: ${phone}
+
+📝 Note: ${note || "Nil"}
+
+Please confirm my order.`;
+
+const url="https://wa.me/917708366480?text="+encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+closeOrder();
+
+}
 
 </script>
 
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,11 +8,8 @@
 
 <title>RR Cloud Kitchen</title>
 
-<meta name="description" content="RR Cloud Kitchen - Chicken Fry, Mutton Fry, Prawn Fry, Crab Fry">
-
-<link rel="icon" href="logo.png">
-
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.png">
 
 </head>
 
@@ -19,13 +17,13 @@
 
 <header class="hero">
 
-<img src="logo.png" class="logo">
+<img src="logo.png" class="logo" alt="RR Cloud Kitchen">
 
 <h1>RR CLOUD KITCHEN</h1>
 
 <p>Homemade Taste, Homely Love ❤️</p>
 
-<a href="https://wa.me/917708366480" class="btn">
+<a href="https://wa.me/917708366480" class="btn" target="_blank">
 Order on WhatsApp
 </a>
 
@@ -33,7 +31,7 @@ Order on WhatsApp
 
 <section class="menu">
 
-<h2>Our Special Menu</h2>
+<h2>🍗 Our Special Menu</h2>
 
 <div class="card">
 
@@ -42,8 +40,8 @@ Order on WhatsApp
 <h3>Chicken Fry</h3>
 
 <p>
-Crispy Outside...
-Juicy Inside...
+Fresh Crispy Chicken Fry
+made with special spices.
 </p>
 
 <a class="btn"
@@ -60,8 +58,8 @@ Order Now
 <h3>Mutton Fry</h3>
 
 <p>
-Rich Taste...
-Pure Satisfaction...
+Traditional Homemade
+Mutton Fry.
 </p>
 
 <a class="btn"
@@ -78,7 +76,8 @@ Order Now
 <h3>Prawn Fry</h3>
 
 <p>
-Fresh Premium Prawn Fry
+Fresh Sea Prawns
+with spicy masala.
 </p>
 
 <a class="btn"
@@ -94,8 +93,67 @@ Order Now
 
 <h3>Crab Fry</h3>
 
+<section class="videos">
+
+<h2>🎥 Cooking Videos</h2>
+
+<p>Watch our latest cooking videos.</p>
+
+<video controls width="100%">
+<source src="videos/video1.mp4" type="video/mp4">
+Your browser does not support video.
+</video>
+
+<br><br>
+
+<video controls width="100%">
+<source src="videos/video2.mp4" type="video/mp4">
+Your browser does not support video.
+</video>
+
+</section>
+
+
+<section class="youtube">
+
+<h2>▶ Our YouTube Channel</h2>
+
+<p>Subscribe for the latest cooking videos and food updates.</p>
+
+<a href="https://youtube.com/@divyaramesh-x4o?si=6WexXHA5RJKLa4U2"
+class="btn"
+target="_blank">
+▶ Visit Our YouTube Channel
+</a>
+
+</section>
+
+
+<section class="contact">
+
+<h2>📍 Contact Us</h2>
+
+<p><strong>WhatsApp:</strong> +91 7708366480</p>
+
+<a href="https://wa.me/917708366480"
+class="btn"
+target="_blank">
+💬 Chat on WhatsApp
+</a>
+
+<br><br>
+
+<a href="https://maps.app.goo.gl/AzDmpVBeVfWZBosg6?g_st=aw"
+class="btn"
+target="_blank">
+📍 Open Google Maps
+</a>
+
+</section>
+
 <p>
-Hot, Spicy & Delicious
+Hot & Spicy
+Crab Fry.
 </p>
 
 <a class="btn"
@@ -106,46 +164,6 @@ Order Now
 </div>
 
 </section>
-<section class="videos">
-
-<h2>🎥 Cooking Videos</h2>
-
-<video controls width="100%">
-<source src="videos/video1.mp4" type="video/mp4">
-</video>
-
-<br><br>
-
-<video controls width="100%">
-<source src="videos/video2.mp4" type="video/mp4">
-</video>
-
-</section>
-
-
-
-<section class="contact">
-
-<h2>📍 Visit RR Cloud Kitchen</h2>
-
-<p>Order fresh homemade food through WhatsApp.</p>
-
-<a class="btn"
-href="https://maps.app.goo.gl/AzDmpVBeVfWZBosg6?g_st=aw"
-target="_blank">
-Open Google Maps
-</a>
-
-<br><br>
-
-<a class="btn"
-href="https://wa.me/917708366480"
-target="_blank">
-Chat on WhatsApp
-</a>
-
-</section>
-
 
 <footer>
 
@@ -153,40 +171,58 @@ Chat on WhatsApp
 
 <p>🍗 Chicken Fry | 🥩 Mutton Fry | 🍤 Prawn Fry | 🦀 Crab Fry</p>
 
-<p>📱 WhatsApp : +91 7708366480</p>
+<p>📱 WhatsApp: +91 7708366480</p>
+
+<p>📍 Trichy, Tamil Nadu</p>
 
 <p>Fresh • Hot • Delicious</p>
 
-<p>© 2026 RR Cloud Kitchen. All Rights Reserved.</p>
+<p>&copy; 2026 RR Cloud Kitchen. All Rights Reserved.</p>
 
 </footer>
 
 <a href="https://wa.me/917708366480"
 class="whatsapp"
-target="_blank">
+target="_blank"
+title="Chat on WhatsApp">
 💬
 </a>
+
 <script>
 
-document.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("load",function(){
+
+document.body.style.opacity="1";
+
+});
 
 const cards=document.querySelectorAll(".card");
 
 const observer=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
+
+entries.forEach((entry)=>{
+
 if(entry.isIntersecting){
+
 entry.target.style.opacity="1";
+
 entry.target.style.transform="translateY(0)";
+
 }
-});
+
 });
 
-cards.forEach(card=>{
-card.style.opacity="0";
-card.style.transform="translateY(40px)";
-card.style.transition="all .6s ease";
-observer.observe(card);
 });
+
+cards.forEach((card)=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(40px)";
+
+card.style.transition="all 0.6s ease";
+
+observer.observe(card);
 
 });
 

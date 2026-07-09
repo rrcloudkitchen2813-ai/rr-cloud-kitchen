@@ -20,7 +20,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),url("chicken.png");
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url("chicken.png");
 background-size:cover;
 background-position:center;
 }
@@ -34,7 +34,7 @@ margin-bottom:20px;
 }
 
 .hero h1{
-font-size:55px;
+font-size:50px;
 color:#ffb300;
 margin-bottom:10px;
 }
@@ -46,13 +46,14 @@ margin-bottom:25px;
 
 .btn{
 display:inline-block;
+padding:14px 28px;
 background:#ff3d00;
 color:#fff;
-padding:14px 30px;
-border-radius:50px;
 text-decoration:none;
+border-radius:50px;
 font-weight:bold;
 transition:.3s;
+margin:8px;
 }
 
 .btn:hover{
@@ -76,11 +77,11 @@ margin-bottom:20px;
 }
 
 .card{
-background:#1d1d1d;
-border-radius:20px;
+background:#1e1e1e;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 0 20px rgba(255,179,0,.15);
-transition:.4s;
+box-shadow:0 0 15px rgba(255,179,0,.15);
+transition:.3s;
 }
 
 .card:hover{
@@ -93,20 +94,14 @@ display:block;
 }
 
 .card h3{
-padding:18px;
+padding:15px;
 text-align:center;
-font-size:26px;
-}
-
-.contact{
-padding:70px 20px;
-text-align:center;
-}
-
-.contact h2{
-font-size:36px;
 color:#ffb300;
-margin-bottom:25px;
+}
+
+.card p{
+padding:0 20px 20px;
+text-align:center;
 }
 
 .videos{
@@ -115,9 +110,8 @@ text-align:center;
 }
 
 .videos h2{
-font-size:36px;
 color:#ffb300;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 video{
@@ -128,56 +122,59 @@ margin:20px auto;
 display:block;
 }
 
-.reviews{
+.contact{
 padding:70px 20px;
 text-align:center;
 }
 
-.reviews h2{
-font-size:36px;
+.contact h2{
 color:#ffb300;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
-.review{
-max-width:500px;
-margin:20px auto;
-background:#1f1f1f;
-padding:25px;
-border-radius:18px;
-box-shadow:0 0 20px rgba(255,179,0,.15);
+.youtube{
+padding:70px 20px;
+text-align:center;
+background:#1b1b1b;
 }
 
-.review p{
-margin:15px 0;
-}
-
-.review b{
+.youtube h2{
 color:#ffb300;
+margin-bottom:15px;
+}
+
+.youtube p{
+margin-bottom:20px;
 }
 
 footer{
 background:#000;
 padding:35px;
 text-align:center;
-margin-top:50px;
+margin-top:40px;
+}
+
+footer h2{
+color:#ffb300;
+margin-bottom:10px;
 }
 
 footer p{
 color:#ccc;
+margin:5px 0;
 }
 
 .whatsapp{
 position:fixed;
-right:20px;
 bottom:20px;
+right:20px;
 width:65px;
 height:65px;
 background:#25D366;
 border-radius:50%;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 font-size:32px;
 color:#fff;
 text-decoration:none;
@@ -191,13 +188,17 @@ transform:scale(1.1);
 }
 
 iframe{
-border-radius:20px;
+width:100%;
+height:350px;
+border:0;
+border-radius:15px;
+margin-top:20px;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:38px;
+font-size:36px;
 }
 
 .hero p{
@@ -218,8 +219,8 @@ font-size:22px;
 }
 
 .btn{
-padding:12px 25px;
 font-size:16px;
+padding:12px 22px;
 }
 
 }

@@ -4,115 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RR Cloud Kitchen</title>
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#111;
-    color:#fff;
-}
-header{
-    background:#b30000;
-    text-align:center;
-    padding:25px;
-}
-h1{
-    margin:0;
-    font-size:38px;
-}
-.hero{
-    text-align:center;
-    padding:40px 20px;
-}
-.menu{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    padding:20px;
-}
-.card{
-    background:#222;
-    border-radius:12px;
-    padding:20px;
-    text-align:center;
-}
-.card img{
-    width:100%;
-    border-radius:10px;
-}
-button{
-    background:#ff0000;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:8px;
-    cursor:pointer;
-}
-.video{
-    text-align:center;
-    padding:30px;
-}
-footer{
-    background:#000;
-    text-align:center;
-    padding:20px;
-}
-</style>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<header>
-<h1>RR CLOUD KITCHEN</h1>
-<p>Fresh • Hot • Delicious</p>
-</header>
+<header class="hero">
+    <img src="images/logo.png" class="logo">
 
-<section class="hero">
-<h2>Welcome to RR Cloud Kitchen</h2>
-<p>Order your favorite seafood and non-veg dishes.</p>
-</section>
+    <h1>RR CLOUD KITCHEN</h1>
+
+    <p>Homemade Taste, Homely Love</p>
+
+    <a href="https://wa.me/917708366480" class="btn">
+        Order on WhatsApp
+    </a>
+
+</header>
 
 <section class="menu">
 
+<h2>Our Special Menu</h2>
+
 <div class="card">
-<img src="images/chicken.jpg" alt="Chicken Fry">
+<img src="images/chicken.jpg">
 <h3>Chicken Fry</h3>
-<button>Order Now</button>
 </div>
 
 <div class="card">
-<img src="images/mutton.jpg" alt="Mutton Fry">
+<img src="images/mutton.jpg">
 <h3>Mutton Fry</h3>
-<button>Order Now</button>
 </div>
 
 <div class="card">
-<img src="images/prawn.jpg" alt="Prawn Fry">
+<img src="images/prawn.jpg">
 <h3>Prawn Fry</h3>
-<button>Order Now</button>
 </div>
 
 <div class="card">
-<img src="images/crab.jpg" alt="Crab Fry">
+<img src="images/crab.jpg">
 <h3>Crab Fry</h3>
-<button>Order Now</button>
 </div>
 
 </section>
 
-<section class="video">
-<h2>Latest Videos</h2>
-
-<video width="320" controls>
-<source src="videos/video1.mp4" type="video/mp4">
-</video>
-
-<p>Add more videos inside the <b>videos</b> folder and duplicate the video tag.</p>
-</section>
-
-<footer>
-<h3>RR CLOUD KITCHEN</h3>
-<p>WhatsApp Orders: +91 XXXXXXXXXX</p>
-</footer>
+<script src="script.js"></script>
 
 </body>
 </html>

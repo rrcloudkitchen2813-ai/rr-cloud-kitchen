@@ -5,8 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RR Cloud Kitchen</title>
 
@@ -18,28 +17,21 @@ content="width=device-width,initial-scale=1.0">
 
 <body>
 
-<!-- HERO -->
-
 <header class="hero">
 
 <div class="overlay"></div>
 
 <div class="hero-content">
 
-<img src="logo.png"
-class="logo"
-alt="RR Cloud Kitchen">
+<img src="logo.png" class="logo" alt="RR Cloud Kitchen">
 
 <h1>RR CLOUD KITCHEN</h1>
 
-<p>
-Homemade Taste ❤️ Homely Love
-</p>
+<p>Homemade Taste ❤️ Homely Love</p>
 
-<a
-href="https://wa.me/917708366480"
-target="_blank"
-class="btn">
+<a href="https://wa.me/917708366480"
+class="btn"
+target="_blank">
 
 Order on WhatsApp
 
@@ -49,13 +41,9 @@ Order on WhatsApp
 
 </header>
 
-<!-- MENU -->
-
 <section class="menu">
 
-<h2>
-🍽️ Our Special Menu
-</h2>
+<h2>🍽️ Our Special Menu</h2>
 <div class="card">
 
 <img src="chicken.png" alt="Chicken Fry">
@@ -72,7 +60,7 @@ Order on WhatsApp
 
 <h3>🥩 Mutton Fry</h3>
 
-<p>Traditional Homemade Mutton Fry with Rich Taste.</p>
+<p>Traditional Homemade Mutton Fry.</p>
 
 </div>
 
@@ -82,7 +70,7 @@ Order on WhatsApp
 
 <h3>🍤 Prawn Fry</h3>
 
-<p>Fresh Sea Prawn Fry with Authentic Spices.</p>
+<p>Fresh Sea Prawn Fry.</p>
 
 </div>
 
@@ -92,28 +80,30 @@ Order on WhatsApp
 
 <h3>🦀 Crab Fry</h3>
 
-<p>Hot & Spicy Crab Fry, Freshly Cooked.</p>
+<p>Hot & Spicy Crab Fry.</p>
 
 </div>
 
 </section>
 
-<!-- COOKING VIDEOS -->
+<!-- VIDEOS -->
 
 <section class="videos">
 
 <h2>🎥 Cooking Videos</h2>
 
-<p>Watch our delicious recipes in action.</p>
+<p>Watch our latest cooking videos.</p>
 
 <video controls preload="metadata">
 <source src="videos/video1.mp4" type="video/mp4">
+Your browser does not support the video tag.
 </video>
 
 <br><br>
 
 <video controls preload="metadata">
 <source src="videos/video2.mp4" type="video/mp4">
+Your browser does not support the video tag.
 </video>
 
 </section>
@@ -123,11 +113,11 @@ Order on WhatsApp
 
 <h2>▶ Our YouTube Channel</h2>
 
-<p>Watch our latest cooking recipes and food videos.</p>
+<p>Watch our latest cooking videos and recipes.</p>
 
 <a href="https://youtube.com/@divyaramesh-x4o?si=6WexXHA5RJKLa4U2"
-target="_blank"
-class="btn">
+class="btn"
+target="_blank">
 
 📺 Visit YouTube Channel
 
@@ -141,16 +131,11 @@ class="btn">
 
 <h2>📍 Contact Us</h2>
 
-<p>
+<p><strong>WhatsApp:</strong> +91 7708366480</p>
 
-📱 WhatsApp : +91 7708366480
-
-</p>
-
-<a
-href="https://wa.me/917708366480"
-target="_blank"
-class="btn">
+<a href="https://wa.me/917708366480"
+class="btn"
+target="_blank">
 
 💬 Chat on WhatsApp
 
@@ -158,10 +143,9 @@ class="btn">
 
 <br><br>
 
-<a
-href="https://maps.app.goo.gl/AzDmpVBeVfWZBosg6?g_st=aw"
-target="_blank"
-class="btn">
+<a href="https://maps.app.goo.gl/AzDmpVBeVfWZBosg6?g_st=aw"
+class="btn"
+target="_blank">
 
 📍 Open Google Maps
 
@@ -169,21 +153,15 @@ class="btn">
 
 </section>
 
-<!-- ORDER BUTTON -->
+<!-- ORDER -->
 
 <section class="order-section">
 
 <h2>🍽️ Ready to Order?</h2>
 
-<p>
+<p>Click below to place your order.</p>
 
-Tap the button below to place your order quickly.
-
-</p>
-
-<button
-class="btn"
-onclick="openOrder()">
+<button class="btn" onclick="openOrder()">
 
 🍽️ Order Food
 
@@ -198,7 +176,7 @@ onclick="openOrder()">
 
 <h2>🍽️ Place Your Order</h2>
 
-<p>Please fill in your details</p>
+<p>Please fill your order details</p>
 
 <label>Choose Item</label>
 
@@ -214,11 +192,24 @@ onclick="openOrder()">
 
 </select>
 
+<label>Quantity</label>
+
+<input
+type="number"
+id="quantity"
+value="1"
+min="1"
+placeholder="Enter Quantity">
+
+<label>Your Name</label>
+
 <input
 type="text"
 id="customerName"
 placeholder="👤 Enter Your Name"
 required>
+
+<label>Mobile Number</label>
 
 <input
 type="tel"
@@ -226,10 +217,13 @@ id="customerPhone"
 placeholder="📱 Enter Mobile Number"
 required>
 
+<label>Special Instructions</label>
+
 <textarea
 id="note"
-placeholder="📝 Special Instructions (Optional)"
-rows="4"></textarea>
+rows="4"
+placeholder="📝 Less spicy, Extra spicy, etc. (Optional)">
+</textarea>
 
 <div class="popup-buttons">
 
@@ -262,7 +256,7 @@ onclick="closeOrder()">
 
 <p>🍗 Chicken Fry | 🥩 Mutton Fry | 🍤 Prawn Fry | 🦀 Crab Fry</p>
 
-<p>📱 WhatsApp: +91 7708366480</p>
+<p>📱 WhatsApp : +91 7708366480</p>
 
 <p>📍 Trichy, Tamil Nadu</p>
 
@@ -287,48 +281,65 @@ title="Chat on WhatsApp">
 <script>
 
 function openOrder(){
+
 document.getElementById("orderPopup").style.display="flex";
+
 }
 
 function closeOrder(){
+
 document.getElementById("orderPopup").style.display="none";
+
 }
 
 function submitOrder(){
 
 const item=document.getElementById("foodItem").value;
+
+const qty=document.getElementById("quantity").value;
+
 const name=document.getElementById("customerName").value.trim();
+
 const phone=document.getElementById("customerPhone").value.trim();
+
 const note=document.getElementById("note").value.trim();
 
 if(name===""){
+
 alert("Please enter your name");
+
 return;
+
 }
 
 if(phone===""){
+
 alert("Please enter your mobile number");
+
 return;
+
 }
 
 const message=
-`🍽️ *RR Cloud Kitchen Order*
+`🍽️ RR Cloud Kitchen Order
 
-🍴 Item: ${item}
+🍗 Item : ${item}
 
-👤 Customer: ${name}
+🔢 Quantity : ${qty}
 
-📱 Mobile: ${phone}
+👤 Customer : ${name}
 
-📝 Special Instructions:
-${note || "None"}
+📱 Mobile : ${phone}
+
+📝 Note : ${note || "None"}
 
 Please confirm my order.`;
 
-window.open(
-"https://wa.me/917708366480?text="+encodeURIComponent(message),
-"_blank"
-);
+const whatsappUrl=
+"https://wa.me/917708366480?text="+
+encodeURIComponent(message);
+
+window.open(whatsappUrl,"_blank");
 
 closeOrder();
 
@@ -337,4 +348,5 @@ closeOrder();
 </script>
 
 </body>
+
 </html>

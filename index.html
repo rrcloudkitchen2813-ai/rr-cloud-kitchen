@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RR Cloud Kitchen</title>
@@ -16,6 +15,8 @@
 </head>
 
 <body>
+
+<!-- HERO -->
 
 <header class="hero">
 
@@ -29,17 +30,11 @@
 
 <p>Homemade Taste ❤️ Homely Love</p>
 
-<a href="https://wa.me/917708366480"
-class="btn"
-target="_blank">
-
-Order on WhatsApp
-
-</a>
-
 </div>
 
 </header>
+
+<!-- MENU -->
 
 <section class="menu">
 
@@ -50,7 +45,10 @@ Order on WhatsApp
 
 <h3>🍗 Chicken Fry</h3>
 
-<p>Fresh, Crispy & Homemade Chicken Fry.</p>
+<p>
+Fresh, Crispy & Homemade Chicken Fry
+made with our special RR Cloud Kitchen spices.
+</p>
 
 </div>
 
@@ -60,7 +58,10 @@ Order on WhatsApp
 
 <h3>🥩 Mutton Fry</h3>
 
-<p>Traditional Homemade Mutton Fry.</p>
+<p>
+Traditional Homemade Mutton Fry
+with authentic flavour and rich taste.
+</p>
 
 </div>
 
@@ -70,7 +71,10 @@ Order on WhatsApp
 
 <h3>🍤 Prawn Fry</h3>
 
-<p>Fresh Sea Prawn Fry.</p>
+<p>
+Fresh Sea Prawn Fry
+prepared with premium spices.
+</p>
 
 </div>
 
@@ -80,7 +84,10 @@ Order on WhatsApp
 
 <h3>🦀 Crab Fry</h3>
 
-<p>Hot & Spicy Crab Fry.</p>
+<p>
+Hot & Spicy Crab Fry
+freshly prepared every day.
+</p>
 
 </div>
 
@@ -113,11 +120,11 @@ Your browser does not support the video tag.
 
 <h2>▶ Our YouTube Channel</h2>
 
-<p>Watch our latest cooking videos and recipes.</p>
+<p>Watch our latest recipes and cooking videos.</p>
 
 <a href="https://youtube.com/@divyaramesh-x4o?si=6WexXHA5RJKLa4U2"
-class="btn"
-target="_blank">
+target="_blank"
+class="btn">
 
 📺 Visit YouTube Channel
 
@@ -129,23 +136,13 @@ target="_blank">
 
 <section class="contact">
 
-<h2>📍 Contact Us</h2>
+<h2>📍 Visit Us</h2>
 
-<p><strong>WhatsApp:</strong> +91 7708366480</p>
-
-<a href="https://wa.me/917708366480"
-class="btn"
-target="_blank">
-
-💬 Chat on WhatsApp
-
-</a>
-
-<br><br>
+<p>Find our location on Google Maps.</p>
 
 <a href="https://maps.app.goo.gl/AzDmpVBeVfWZBosg6?g_st=aw"
-class="btn"
-target="_blank">
+target="_blank"
+class="btn">
 
 📍 Open Google Maps
 
@@ -153,13 +150,17 @@ target="_blank">
 
 </section>
 
-<!-- ORDER -->
+<!-- READY TO ORDER -->
 
 <section class="order-section">
 
 <h2>🍽️ Ready to Order?</h2>
 
-<p>Click below to place your order.</p>
+<p>
+
+Choose your favourite dish, enter your details and send your order.
+
+</p>
 
 <button class="btn" onclick="openOrder()">
 
@@ -176,7 +177,7 @@ target="_blank">
 
 <h2>🍽️ Place Your Order</h2>
 
-<p>Please fill your order details</p>
+<p>Please fill in your order details</p>
 
 <label>Choose Item</label>
 
@@ -197,8 +198,8 @@ target="_blank">
 <input
 type="number"
 id="quantity"
-value="1"
 min="1"
+value="1"
 placeholder="Enter Quantity">
 
 <label>Your Name</label>
@@ -206,7 +207,7 @@ placeholder="Enter Quantity">
 <input
 type="text"
 id="customerName"
-placeholder="👤 Enter Your Name"
+placeholder="Enter Your Name"
 required>
 
 <label>Mobile Number</label>
@@ -214,16 +215,23 @@ required>
 <input
 type="tel"
 id="customerPhone"
-placeholder="📱 Enter Mobile Number"
+placeholder="Enter Mobile Number"
 required>
+
+<label>Delivery Address</label>
+
+<textarea
+id="address"
+rows="3"
+placeholder="Enter Delivery Address"
+required></textarea>
 
 <label>Special Instructions</label>
 
 <textarea
 id="note"
-rows="4"
-placeholder="📝 Less spicy, Extra spicy, etc. (Optional)">
-</textarea>
+rows="3"
+placeholder="Less spicy, Extra spicy (Optional)"></textarea>
 
 <div class="popup-buttons">
 
@@ -256,8 +264,6 @@ onclick="closeOrder()">
 
 <p>🍗 Chicken Fry | 🥩 Mutton Fry | 🍤 Prawn Fry | 🦀 Crab Fry</p>
 
-<p>📱 WhatsApp : +91 7708366480</p>
-
 <p>📍 Trichy, Tamil Nadu</p>
 
 <p>❤️ Homemade Taste • Homely Love</p>
@@ -265,18 +271,6 @@ onclick="closeOrder()">
 <p>&copy; 2026 RR Cloud Kitchen. All Rights Reserved.</p>
 
 </footer>
-
-<!-- FLOATING WHATSAPP -->
-
-<a
-href="https://wa.me/917708366480"
-class="whatsapp"
-target="_blank"
-title="Chat on WhatsApp">
-
-💬
-
-</a>
 
 <script>
 
@@ -302,44 +296,48 @@ const name=document.getElementById("customerName").value.trim();
 
 const phone=document.getElementById("customerPhone").value.trim();
 
+const address=document.getElementById("address").value.trim();
+
 const note=document.getElementById("note").value.trim();
 
 if(name===""){
-
 alert("Please enter your name");
-
 return;
-
 }
 
 if(phone===""){
-
 alert("Please enter your mobile number");
-
 return;
+}
 
+if(address===""){
+alert("Please enter your delivery address");
+return;
 }
 
 const message=
-`🍽️ RR Cloud Kitchen Order
+`🍽️ RR CLOUD KITCHEN ORDER
 
-🍗 Item : ${item}
+🍴 Item : ${item}
 
 🔢 Quantity : ${qty}
 
-👤 Customer : ${name}
+👤 Name : ${name}
 
 📱 Mobile : ${phone}
 
-📝 Note : ${note || "None"}
+🏠 Address :
+${address}
+
+📝 Note :
+${note || "No Special Instructions"}
 
 Please confirm my order.`;
 
-const whatsappUrl=
-"https://wa.me/917708366480?text="+
-encodeURIComponent(message);
-
-window.open(whatsappUrl,"_blank");
+window.open(
+"https://wa.me/917708366480?text="+encodeURIComponent(message),
+"_blank"
+);
 
 closeOrder();
 

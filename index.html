@@ -16,8 +16,6 @@
 
 <body>
 
-<!-- HERO -->
-
 <header class="hero">
 
 <div class="overlay"></div>
@@ -34,21 +32,18 @@
 
 </header>
 
-<!-- MENU -->
-
 <section class="menu">
 
 <h2>🍽️ Our Special Menu</h2>
+<!-- MENU ITEMS -->
+
 <div class="card">
 
-<img src="chicken.png" alt="Chicken Fry">
+<img src="mutton-kulambu.png" alt="Mutton Kulambu">
 
-<h3>🍗 Chicken Fry</h3>
+<h3>🥘 Mutton Kulambu</h3>
 
-<p>
-Fresh, Crispy & Homemade Chicken Fry
-made with our special RR Cloud Kitchen spices.
-</p>
+<p><strong>₹375</strong></p>
 
 </div>
 
@@ -58,23 +53,57 @@ made with our special RR Cloud Kitchen spices.
 
 <h3>🥩 Mutton Fry</h3>
 
-<p>
-Traditional Homemade Mutton Fry
-with authentic flavour and rich taste.
-</p>
+<p><strong>₹385</strong></p>
 
 </div>
 
 <div class="card">
 
-<img src="prawn.png" alt="Prawn Fry">
+<img src="chicken-kulambu.png" alt="Chicken Kulambu">
 
-<h3>🍤 Prawn Fry</h3>
+<h3>🍛 Chicken Kulambu</h3>
 
-<p>
-Fresh Sea Prawn Fry
-prepared with premium spices.
-</p>
+<p><strong>₹275</strong></p>
+
+</div>
+
+<div class="card">
+
+<img src="chicken.png" alt="Chicken Fry">
+
+<h3>🍗 Chicken Fry</h3>
+
+<p><strong>₹285</strong></p>
+
+</div>
+
+<div class="card">
+
+<img src="chicken65-boneless.png" alt="Chicken 65 Boneless">
+
+<h3>🍖 Chicken 65 (Boneless)</h3>
+
+<p><strong>₹200</strong></p>
+
+</div>
+
+<div class="card">
+
+<img src="chicken65.png" alt="Chicken 65">
+
+<h3>🍖 Chicken 65</h3>
+
+<p><strong>₹150</strong></p>
+
+</div>
+
+<div class="card">
+
+<img src="prawn.png" alt="Prawns Fry">
+
+<h3>🍤 Prawns Fry</h3>
+
+<p><strong>₹360</strong></p>
 
 </div>
 
@@ -84,16 +113,13 @@ prepared with premium spices.
 
 <h3>🦀 Crab Fry</h3>
 
-<p>
-Hot & Spicy Crab Fry
-freshly prepared every day.
-</p>
+<p><strong>₹360</strong></p>
 
 </div>
 
 </section>
 
-<!-- VIDEOS -->
+<!-- COOKING VIDEOS -->
 
 <section class="videos">
 
@@ -103,14 +129,12 @@ freshly prepared every day.
 
 <video controls preload="metadata">
 <source src="videos/video1.mp4" type="video/mp4">
-Your browser does not support the video tag.
 </video>
 
 <br><br>
 
 <video controls preload="metadata">
 <source src="videos/video2.mp4" type="video/mp4">
-Your browser does not support the video tag.
 </video>
 
 </section>
@@ -120,11 +144,11 @@ Your browser does not support the video tag.
 
 <h2>▶ Our YouTube Channel</h2>
 
-<p>Watch our latest recipes and cooking videos.</p>
+<p>Watch our latest cooking recipes and kitchen updates.</p>
 
 <a href="https://youtube.com/@divyaramesh-x4o?si=6WexXHA5RJKLa4U2"
-target="_blank"
-class="btn">
+class="btn"
+target="_blank">
 
 📺 Visit YouTube Channel
 
@@ -136,13 +160,13 @@ class="btn">
 
 <section class="contact">
 
-<h2>📍 Visit Us</h2>
+<h2>📍 Visit RR Cloud Kitchen</h2>
 
-<p>Find our location on Google Maps.</p>
+<p>Find us easily using Google Maps.</p>
 
 <a href="https://maps.app.goo.gl/AzDmpVBeVfWZBosg6?g_st=aw"
-target="_blank"
-class="btn">
+class="btn"
+target="_blank">
 
 📍 Open Google Maps
 
@@ -157,12 +181,12 @@ class="btn">
 <h2>🍽️ Ready to Order?</h2>
 
 <p>
-
-Choose your favourite dish, enter your details and send your order.
-
+Choose your favourite dish and place your order in seconds.
 </p>
 
-<button class="btn" onclick="openOrder()">
+<button
+class="btn"
+onclick="openOrder()">
 
 🍽️ Order Food
 
@@ -177,19 +201,27 @@ Choose your favourite dish, enter your details and send your order.
 
 <h2>🍽️ Place Your Order</h2>
 
-<p>Please fill in your order details</p>
+<p>Please fill in the details below</p>
 
 <label>Choose Item</label>
 
 <select id="foodItem">
 
-<option value="Chicken Fry">🍗 Chicken Fry</option>
+<option value="Mutton Kulambu">🥘 Mutton Kulambu - ₹375</option>
 
-<option value="Mutton Fry">🥩 Mutton Fry</option>
+<option value="Mutton Fry">🥩 Mutton Fry - ₹385</option>
 
-<option value="Prawn Fry">🍤 Prawn Fry</option>
+<option value="Chicken Kulambu">🍛 Chicken Kulambu - ₹275</option>
 
-<option value="Crab Fry">🦀 Crab Fry</option>
+<option value="Chicken Fry">🍗 Chicken Fry - ₹285</option>
+
+<option value="Chicken 65 Boneless">🍖 Chicken 65 Boneless - ₹200</option>
+
+<option value="Chicken 65">🍖 Chicken 65 - ₹150</option>
+
+<option value="Prawns Fry">🍤 Prawns Fry - ₹360</option>
+
+<option value="Crab Fry">🦀 Crab Fry - ₹360</option>
 
 </select>
 
@@ -198,8 +230,8 @@ Choose your favourite dish, enter your details and send your order.
 <input
 type="number"
 id="quantity"
-min="1"
 value="1"
+min="1"
 placeholder="Enter Quantity">
 
 <label>Your Name</label>
@@ -231,7 +263,7 @@ required></textarea>
 <textarea
 id="note"
 rows="3"
-placeholder="Less spicy, Extra spicy (Optional)"></textarea>
+placeholder="Example: Less spicy, No onion (Optional)"></textarea>
 
 <div class="popup-buttons">
 
@@ -262,7 +294,13 @@ onclick="closeOrder()">
 
 <h2>RR CLOUD KITCHEN</h2>
 
-<p>🍗 Chicken Fry | 🥩 Mutton Fry | 🍤 Prawn Fry | 🦀 Crab Fry</p>
+<p>
+🥘 Mutton Kulambu • 🥩 Mutton Fry • 🍛 Chicken Kulambu • 🍗 Chicken Fry
+</p>
+
+<p>
+🍖 Chicken 65 • 🍤 Prawns Fry • 🦀 Crab Fry
+</p>
 
 <p>📍 Trichy, Tamil Nadu</p>
 
@@ -318,19 +356,19 @@ return;
 const message=
 `🍽️ RR CLOUD KITCHEN ORDER
 
-🍴 Item : ${item}
+🍴 Item: ${item}
 
-🔢 Quantity : ${qty}
+🔢 Quantity: ${qty}
 
-👤 Name : ${name}
+👤 Customer: ${name}
 
-📱 Mobile : ${phone}
+📱 Mobile: ${phone}
 
-🏠 Address :
+🏠 Address:
 ${address}
 
-📝 Note :
-${note || "No Special Instructions"}
+📝 Special Instructions:
+${note || "None"}
 
 Please confirm my order.`;
 

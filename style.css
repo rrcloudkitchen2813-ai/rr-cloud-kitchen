@@ -361,7 +361,93 @@ font-size:15px;
 color:#ccc;
 margin:6px 0;
 }
+/* ===========================
+   CUSTOMER REVIEWS
+=========================== */
 
+.reviews{
+
+padding:60px 20px;
+
+text-align:center;
+
+background:#181818;
+
+}
+
+.reviews h2{
+
+font-size:36px;
+
+color:#ffb300;
+
+margin-bottom:10px;
+
+}
+
+.review-subtitle{
+
+color:#ddd;
+
+margin-bottom:30px;
+
+font-size:18px;
+
+}
+
+.review-card{
+
+background:#232323;
+
+padding:25px;
+
+border-radius:18px;
+
+margin:20px auto;
+
+max-width:700px;
+
+border:2px solid rgba(255,179,0,.25);
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+transition:.3s;
+
+}
+
+.review-card:hover{
+
+transform:translateY(-5px);
+
+border-color:#ffb300;
+
+}
+
+.review-card h3{
+
+font-size:30px;
+
+margin-bottom:15px;
+
+}
+
+.review-card p{
+
+font-size:17px;
+
+color:#ddd;
+
+margin-bottom:12px;
+
+}
+
+.review-card h4{
+
+color:#ffb300;
+
+font-size:18px;
+
+}
 /* ===================================
    MOBILE VIEW
 =================================== */
